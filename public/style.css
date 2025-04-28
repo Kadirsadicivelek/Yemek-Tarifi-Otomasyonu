@@ -1,0 +1,287 @@
+/* sayfanın genel görünümünü ayarlıyoruz */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #88c4ff 0%, #5c9ce5 100%);
+    color: #2c3e50;
+    min-height: 100vh;
+}
+
+/* içeriği ortalamak için ana kutuyu ayarlıyoruz */
+.ana_kutu {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* başlığı güzel göstermek için stil veriyoruz */
+.baslik {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    font-weight: 700;
+}
+
+/* form kutusuna cam efekti veriyoruz */
+.form_kutusu {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+/* form kutusuna hover efekti ekliyoruz */
+.form_kutusu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.yemek_formu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form_elemani {
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.form_elemani:focus {
+    outline: none;
+    border-color: #5c9ce5;
+    box-shadow: 0 0 0 3px rgba(92, 156, 229, 0.2);
+}
+
+.tarif_aciklamasi {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.ekle_butonu {
+    padding: 15px 25px;
+    background: linear-gradient(45deg, #5c9ce5 0%, #88c4ff 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(92, 156, 229, 0.3);
+}
+
+.ekle_butonu:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(92, 156, 229, 0.4);
+    background: linear-gradient(45deg, #88c4ff 0%, #5c9ce5 100%);
+}
+
+.arama_kutusu {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.arama_alani {
+    flex: 1;
+}
+
+.kategori_secici {
+    min-width: 150px;
+}
+
+.tarifler_listesi {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.tarif_karti {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarif_karti:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.2);
+}
+
+.tarif_karti h3 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin: 0 0 15px 0;
+    border-bottom: 2px solid #5c9ce5;
+    padding-bottom: 10px;
+}
+
+.kategori_rozeti {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    background: linear-gradient(45deg, #5c9ce5, #88c4ff);
+    color: white;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    box-shadow: 0 2px 10px rgba(92, 156, 229, 0.3);
+}
+
+.tarif_karti h4 {
+    color: #34495e;
+    font-size: 1.2em;
+    margin: 20px 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tarif_karti h4::before {
+    content: '•';
+    color: #5c9ce5;
+    font-size: 1.5em;
+}
+
+.tarif_karti p {
+    color: #596777;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 0 15px 0;
+    font-size: 1.1em;
+    white-space: pre-line;
+}
+
+.tarif_karti p:last-child {
+    padding-bottom: 0;
+}
+
+.tarif_resmi {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+@keyframes yukariKaydir {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tarif_karti {
+    animation: yukariKaydir 0.5s ease-out forwards;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #5c9ce5 0%, #88c4ff 100%);
+    border-radius: 5px;
+}
+
+.giris_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_icerik {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.resim_yukleme {
+    margin: 15px 0;
+}
+
+.resim_yukleme input[type="file"] {
+    margin: 10px 0;
+}
+
+.resim_onizleme {
+    width: 100%;
+    height: 200px;
+    border: 2px solid #5c9ce5;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.yildizlar {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.yildiz {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.yildiz.aktif {
+    color: gold;
+}
+
+@media (max-width: 768px) {
+    .ana_kutu {
+        padding: 10px;
+    }
+    
+    .arama_kutusu {
+        flex-direction: column;
+    }
+    
+    .tarifler_listesi {
+        grid-template-columns: 1fr;
+    }
+}

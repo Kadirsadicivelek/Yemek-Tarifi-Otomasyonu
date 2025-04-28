@@ -1,0 +1,65 @@
+<!-- Kadir Sadi Civelek -->
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yemek Tarifleri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ana_kutu">
+        <h1 class="baslik">Yemek Tarifleri</h1>
+        
+        <div class="form_kutusu">
+            <h2>Yeni Tarif Ekle</h2>
+            <form id="tarifForm" class="yemek_formu">
+                <input type="text" id="tarifAdi" class="form_elemani" placeholder="Tarif Adı" required>
+                <textarea id="malzemeler" class="form_elemani tarif_aciklamasi" placeholder="Malzemeler (Her malzemeyi yeni satıra yazın)" required></textarea>
+                <textarea id="yapilisi" class="form_elemani tarif_aciklamasi" placeholder="Yapılışı" required></textarea>
+                <select id="kategori" class="form_elemani kategori_secici" required>
+                    <option value="">Kategori Seçin</option>
+                    <option value="corbalar">Çorbalar</option>
+                    <option value="anayemekler">Ana Yemekler</option>
+                    <option value="tatlilar">Tatlılar</option>
+                    <option value="salatalar">Salatalar</option>
+                </select>
+                <div class="resim_yukleme">
+                    <label for="tarifResmi">Yemek Fotoğrafı:</label>
+                    <input type="file" id="tarifResmi" accept="image/*" class="form_elemani">
+                    <div id="onizleme" class="resim_onizleme"></div>
+                </div>
+                <button type="submit" class="ekle_butonu">Tarif Ekle</button>
+            </form>
+        </div>
+
+        <div class="arama_kutusu">
+            <input type="text" id="aramaKutusu" class="form_elemani arama_alani" placeholder="Tarif ara...">
+            <select id="kategoriFiltre" class="form_elemani kategori_secici">
+                <option value="">Tüm Kategoriler</option>
+                <option value="corbalar">Çorbalar</option>
+                <option value="anayemekler">Ana Yemekler</option>
+                <option value="tatlilar">Tatlılar</option>
+                <option value="salatalar">Salatalar</option>
+            </select>
+        </div>
+
+        <div id="tarifListesi" class="tarifler_listesi"></div>
+    </div>
+
+    <div class="giris_modal" id="girisModal">
+        <div class="modal_icerik">
+            <h2>Giriş Yap</h2>
+            <form id="girisForm" class="giris_formu">
+                <input type="email" class="form_elemani" placeholder="E-posta" required>
+                <input type="password" class="form_elemani" placeholder="Şifre" required>
+                <button type="submit" class="giris_butonu">Giriş Yap</button>
+            </form>
+            <p>Hesabınız yok mu? <a href="#" id="kayitGoster">Kayıt Ol</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

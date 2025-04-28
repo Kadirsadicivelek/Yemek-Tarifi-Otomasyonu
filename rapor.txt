@@ -1,0 +1,52 @@
+YEMEK TARİFİ UYGULAMASI GELİŞTİRME RAPORU
+Öğrenci: Kadir Sadi Civelek no : 2400005562
+
+1. PROJE AMACI
+Bu projeyi kullanıcıların kolayca yemek tarifleri ekleyebileceği, arayabileceği ve kategorize edebileceği bir web uygulaması olarak tasarladım. 
+
+2. KULLANILAN TEKNOLOJİLER
+- HTML5
+- CSS3
+- JavaScript
+- Nodejs
+- Expressjs (Localde calıstrmak için)
+- JSON (Veri Depolama)
+
+3. GELİŞTİRME SÜRECİ
+
+ Tasarım Aşaması:
+- Modern ve kullanıcı dostu bir arayüz için gradyan renkler kullandım
+- Responsive tasarım için CSS Grid ve Flexbox kullandım
+- CSS animasyonları ekleyerek daha dinamik bir görünüm sağladım
+
+ Kod Yapısı:
+- MVC Model-View-Controller mimarisini çok ama çok basit seviyede uyguladım
+- Modüler JavaScript kodu yazdım
+- Türkçe değişken ve class isimleri kullanarak okunabilirliği artırdım
+- Json olarak kayıt etme mevcut
+
+4. İLHAM KAYNAKLARI
+- https://css-tricks.com/ 
+- https://www.w3schools.com/
+
+5. KARŞILAŞILAN ZORLUKLAR
+- Veritabanı entegrasyonunda SQLite kurulum sorunları yaşadım
+- Çözüm olarak JSON dosya sistemi kullanmaya karar verdim
+- Asenkron JavaScript konularında zorlandım ama async/await (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) yapısını öğrenerek aştım
+
+6. ÖĞRENİLEN DERSLER
+- Proje planlaması
+- Git hesabı kullanımı
+- Responsive tasarım
+
+7. İYİLEŞTİRME ÖNERİLERİ
+- Gerçek bir veritabanına geçiş yapılabilir
+
+8. SONUÇ
+Bu proje sayesinde modern web teknolojilerini pratik etme fırsatı buldum. Özellikle frontend geliştirme konusunda deneyim kazandım. responsive tasarım prensiplerini uygulama fırsatı yakaladım.
+
+Kaynakça:
+1. https://developer.mozilla.org/
+2. https://css-tricks.com/
+3. https://nodejs.org/
+4. https://expressjs.com/
